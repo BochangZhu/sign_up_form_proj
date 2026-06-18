@@ -1,0 +1,92 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+a{
+    font-weight:bold;
+    color:rgba(36, 36, 36);
+    transition:all 0.3s ease;
+    &:hover{
+        color:white;
+    }
+}
+
+@font-face {
+    font-family: "BlackOps";
+    src: url('font/blackopsone-regular-webfont.woff') format('woff'),
+         url('font/blackopsone-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-sec{
+    background: url(universe_bg_img.jpg) no-repeat center/cover;
+    width: 33%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-sec{
+    width: 67%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+.logo-sec{
+    position: relative;
+    top: 25%;
+    background: rgb(0 0 0 / 30%);
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    gap: 0.5rem;
+}
+
+.logo{
+    max-width: 100%;
+    max-height: 100%;
+}
+.odin-text{
+    font: 3rem 'BlackOps', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    color: white;
+}
+
+.credit{
+    background-color:rgb(250 235 215 / 30%);
+    position: relative;
+    margin: 0 auto;
+    top: 80%;
+}
+
+.top{
+    height: 25%;
+    display:flex;
+    flex-direction: column;
+    padding: 8% 3.5%;
+    gap: 3%;
+    justify-content: center;
+    text-align: center;
+}
+
+.mid{
+    height: 50%;
+    background-color: rgb(255 228 196 / 30%);
+}
+
+.bottom{
+    height: 25%;
+}
+
