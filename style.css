@@ -112,6 +112,9 @@ body{
         width: calc((100% - 10%)/2);
         height: calc(75%/3);
         &>input{
+            border: 1px solid antiquewhite;
+            font-family: "Black Ops One", system-ui;
+            font-size: 1rem;
             width: 75%;
             height: calc((100% - 15px)*0.7);
         }
@@ -160,3 +163,32 @@ body{
         margin-left: 5px;
     }
 }
+
+label:has(+ input[required])::after{
+    position: relative;
+    content: "#";
+    color:red;
+    left: 10px;
+
+}
+
+label:has(+ input:user-valid)::after{
+    position: relative;
+    content: "✅️";
+    left: 10px;
+}
+
+label:has(+ input:user-invalid)::after{
+    position: relative;
+    content: "❌";
+    left: 10px;
+}
+
+input:user-valid{
+    box-shadow: 0 0 10px 2.5px green;
+}
+
+input:user-invalid{
+    box-shadow: 0 0 10px 2.5px red;
+}
+
