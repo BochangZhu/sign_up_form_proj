@@ -35,11 +35,11 @@
                 <form action="#" id="form_content" method="post">
                     <div>
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name">
+                        <input type="text" id="first-name" class="name" name="first-name" pattern="(?!.*\d)(?!.*[^a-zA-Z0-9])(?=.*[a-zA-Z])[a-zA-Z]+">
                     </div>
                     <div>
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name" required>
+                        <input type="text" id="last-name" name="last-name" class="name" required pattern="(?!.*\d)(?!.*[^a-zA-Z0-9])(?=.*[a-zA-Z])[a-zA-Z]+">
                     </div>
                     <div>
                         <label for="email">EMAIL</label>
@@ -47,11 +47,12 @@
                     </div>
                     <div>
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
                     </div>
                     <div>
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[^A-Za-z0-9]).{8,16}"
+                        title="Please enter 8-16 digit password with at least a letter, number and symbol.">
                     </div>
                     <div>
                         <label for="confirm">CONFIRM PASSWORD</label>
@@ -60,7 +61,7 @@
                 </form>
             </div>
             <div class="bottom">
-                <button type="submit">Create Account</button>
+                <button type="submit" form="form_content">Create Account</button>
                 <div class="already">Aleady have an account?<a href="#">Log in</a></div>
             </div>
         </div>
